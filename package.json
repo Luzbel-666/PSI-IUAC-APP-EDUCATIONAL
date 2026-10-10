@@ -1,7 +1,7 @@
 {
   "name": "psi-iuac-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
     "@expo/vector-icons": "^15.1.1",
@@ -24,7 +24,8 @@
     "start": "node server.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build": "npx expo export -p web"
   },
   "private": true
 }
