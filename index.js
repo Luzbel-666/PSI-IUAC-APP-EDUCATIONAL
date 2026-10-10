@@ -1,11 +1,8 @@
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+import { registerRootComponent } from 'expo';
 
-app.get('/', (req, res) => {
-  res.send('Servidor de la App del IUAC funcionando correctamente');
-});
+import App from './App';
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+registerRootComponent(App);
