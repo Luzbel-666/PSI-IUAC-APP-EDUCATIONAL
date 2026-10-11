@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: psi-iuac-app-web
+    env: node
+    buildCommand: npm install && npx expo export -p web
+    startCommand: node server.js
